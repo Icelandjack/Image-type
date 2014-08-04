@@ -31,7 +31,7 @@ description:         A package used to determine the type of an image according 
   .
   Supports the following extensions: @JPEG@, @PNG@, @GIF@, @TIFF@, @RGB@, @PBM@, @PGM@, @PPM@, @RAST@, @XBM@, @BMP@, @WebP@, @EXR@.
   .
-homepage:            github something
+homepage:            https://github.com/Icelandjack/Image-type
 license:             BSD3
 license-file:        LICENSE
 author:              Baldur Blöndal
