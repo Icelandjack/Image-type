@@ -243,7 +243,7 @@ isExr file = isJust <$> reading file testExr
 
 testSvg :: ByteString -> Maybe String
 testSvg bytes = [ "svg+xml"
-                | isPrefixOf "<svg" bytes
+                | isPrefixOf "<svg" bytes || isPrefixOf "<?xml" bytes
                 ]
 
 
