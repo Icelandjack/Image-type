@@ -241,12 +241,18 @@ testExr bytes = [ "exr"
 isExr :: FilePath -> IO Bool
 isExr file = isJust <$> reading file testExr
 
+testSvg :: ByteString -> Maybe String
+testSvg bytes = [ "svg+xml"
+                | isPrefixOf "<svg" bytes || isPrefixOf "<?xml" bytes
+                ]
+
+
 tests :: [ByteString -> Maybe String]
 tests = [testJpeg, testPng, testGif,
          testTiff, testRgb, testPbm,
          testPgm, testPpm, testRast,
          testXbm, testBmp, testWebp,
-         testExr]
+         testExr, testSvg]
 
 -- | Gets a ginel possible file types based on fairly arbitrary tie
 -- breaking.
